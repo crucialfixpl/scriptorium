@@ -1,0 +1,12 @@
+@mixin flex($flex-direction, $align-items, $justify-content) {
+  align-items: $align-items;
+  display: flex;
+  flex-direction: $flex-direction;
+  justify-content: $justify-content;
+}
+
+@mixin sectionContainer {
+  margin: 0;
+  min-height: 80vh;
+  padding: 0;
+}

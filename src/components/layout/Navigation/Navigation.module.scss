@@ -1,0 +1,183 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  @include flex(row, center, space-between);
+  // height: 5rem;
+  // max-width: 100vw;
+  // position: fixed;
+  // top: 0;
+  // width: 100vw;
+  // z-index: 1000;
+  // transition: $animation;
+
+  .burgerButton {
+    border: none;
+    bottom: 2vh;
+    outline: none;
+    right: 2vh;
+    z-index: 100;
+    span,
+    span:before,
+    span:after {
+      outline: none;
+      background-color: $link-active;
+    }
+  }
+
+  .mobileNav {
+    @include flex(row, center, flex-start);
+    // background: $navigationBackground;
+    height: 100%;
+    // transform: $animation;
+    padding-left: 2rem;
+    // .colLogo {
+    //   height: 100%;
+    //   a {
+    //     height: 100%;
+    //     img {
+    //       height: 100%;
+    //       box-shadow: none;
+    //     }
+    //   }
+    // }
+  }
+  .menu {
+    @include flex(row, center, space-around);
+    width: 50%;
+    height: 100%;
+    // background: $navigationBackground;
+    &__hidden {
+      @extend .menu;
+    }
+
+    .navLink {
+      // color: $navigationColorLink;
+      // font-family: $navLinkFont;
+      font-size: clamp(0.75rem, 1.1rem, 2rem);
+      font-weight: 400;
+      height: 100%;
+      position: relative;
+      text-decoration: none;
+      // transition: $animation;
+      width: 100%;
+      &:after {
+        position: absolute;
+        transition: 0.1s;
+        content: "";
+        width: 0;
+        left: 0;
+        bottom: -25%;
+        height: 3px;
+        background: $link-active;
+      }
+      &:hover {
+        text-shadow: -0.25px -0.25px 0 black, 0.25px 0.25px black;
+        transition: $animationEase;
+        &:after {
+          width: 100%;
+        }
+      }
+      ::before {
+        display: block;
+        content: attr(title);
+        font-weight: bold;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+    }
+
+    .navLink__active {
+      @extend .navLink;
+      transition: $animationEase;
+      text-shadow: -0.25px -0.25px 0 black, 0.25px 0.25px black;
+      color: $link-active;
+      &:after {
+        width: 100%;
+      }
+    }
+
+    @media (pointer: coarse) {
+      .navLink:active {
+        text-shadow: -0.25px -0.25px 0 black, 0.25px 0.25px black;
+        transition: $animationEase;
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .root {
+    .menu {
+      flex-direction: row;
+    }
+
+    .burgerButton {
+      display: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 0px) and (max-width: 767px) {
+  .root {
+    .mobileNav {
+      // @include flex(row, center, center);
+      padding-left: 0;
+      position: absolute;
+      // width: 100%;
+      right: 0;
+      top: 0.5rem;
+      img {
+        margin-right: 0;
+        margin-left: 0;
+        position: absolute;
+      }
+    }
+    .menu {
+      background: inherit;
+      border-radius: 0;
+      top: 0;
+      filter: drop-shadow(5px 5px 40px rgba(0, 0, 0, 0.4));
+      flex-direction: column;
+      height: 100%;
+      right: 0;
+      margin: 0;
+      position: fixed;
+      transition: all 0.5s;
+      visibility: visible;
+      // width: 100%;
+      justify-content: center;
+      z-index: -1;
+      &__hidden {
+        right: -50%;
+      }
+      & > div {
+        @include flex(column, center, center);
+        max-height: 3rem;
+      }
+    }
+
+    .burgerButton {
+      display: flex;
+    }
+
+  }
+  .navLink {
+    &:after {
+      top: 150%;
+    }
+    &:hover {
+      &:after {
+        top: 150%;
+      }
+    }
+  }
+  .navLink__active {
+    &:after {
+      bottom: -50%;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+[
+    {
+      "id": 0,
+      "linkSrc": "#",
+      "linkName": "Home"
+    },
+    {
+      "id": 2,
+      "linkSrc": "projects",
+      "linkName": "Projects"
+    },
+    {
+      "id": 3,
+      "linkSrc": "contact",
+      "linkName": "Contact"
+    }
+  ]
+  

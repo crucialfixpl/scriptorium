@@ -1,27 +1,40 @@
-import { useState, useEffect } from 'react';
+/* eslint-disable import/no-extraneous-dependencies */
+// import { useState, useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+
 import './App.css';
+import { AnimatePresence } from 'framer-motion';
+
+import './styles/bootstrap.scss';
+import styles from './App.module.scss';
+
+import ScrollToTop from './components/utils/ScrollToTop';
+import MainLayout from './components/layout/MainLayout/MainLayout';
+import MainPage from './components/views/MainPage/MainPage';
+import NotFound from './components/views/NotFound/NotFound';
+import Projects from './components/views/Projects/Projects';
+import Contact from './components/views/Contact/Contact';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  useEffect(() => {
-    if (count) {
-      console.log(`count`, count);
-    }
-  });
+  const location = useLocation();
 
   return (
     <div className="App">
-      <div>
-        <a
-          href="https://github.com/crucialfixpl/"
-          target="_blank"
-          rel="noreferrer"
+      <MainLayout>
+        <ScrollToTop />
+        <AnimatePresence
+          mode="wait"
+          initial={false}
+          onExitComplete={() => window.scrollTo(0, 0)}
         >
-          <img src="/logo.svg" className="logo" alt="Scriptorium logo" />
-        </a>
-      </div>
-      <h1>Work in progress</h1>
+          <Routes location={location} key={location.pathname}>
+            <Route path="/" element={<MainPage />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </AnimatePresence>
+      </MainLayout>
     </div>
   );
 }

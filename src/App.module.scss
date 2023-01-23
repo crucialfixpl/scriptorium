@@ -1,0 +1,70 @@
+@import "./styles/global.scss";
+
+
+
+
+// @import "./styles/animations.scss";
+
+// .root {
+//   border: 1px solid red;
+//   padding: 2rem;
+//   text-align: center;
+//   // margin: 0 auto;
+//   // width: 100%;
+// }
+
+// @keyframes star {
+//   from {
+//     background-position: 0 0;
+//   }
+//   to {
+//     background-position: 0 -10000px;
+//   }
+// }
+
+// body {
+
+// }
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+// .logo {
+//   filter: invert(79%) sepia(86%) saturate(502%) hue-rotate(335deg)
+//     brightness(100%) contrast(102%);
+//   height: 6em;
+//   padding: 1.5em;
+//   will-change: filter;
+//   max-width: 80%;
+// }
+// .logo:hover {
+//   filter: invert(79%) sepia(86%) saturate(502%) hue-rotate(335deg)
+//     brightness(100%) contrast(102%) drop-shadow(0 0 2em #000);
+// }
+
+// @keyframes logo-spin {
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg);
+//   }
+// }
+
+// @media (prefers-reduced-motion: no-preference) {
+//   a:nth-of-type(2) .logo {
+//     animation: logo-spin infinite 20s linear;
+//   }
+// }
+
+// .card {
+//   padding: 2em;
+// }
+
+// .read-the-docs {
+//   color: #888;
+// }
