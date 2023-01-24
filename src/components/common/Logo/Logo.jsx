@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import useWindowDimensions from '../../utils/ScreenDimensions';
 import styles from './Logo.module.scss';
 
@@ -7,13 +8,13 @@ const Logo = () => {
 
   return (
     <div className={styles.root}>
-      <a href="/#">
+      <Link to="/">
         <img
           src={width < 768 ? `/logoS.svg` : `/logo.svg`}
           className={styles.logo}
           alt="Scriptorium logo"
         />
-      </a>
+      </Link>
     </div>
   );
 };
