@@ -14,6 +14,7 @@ const Contact = () => (
     transition={usePageTransition.pageTransition}
   >
     <h2>Contact</h2>
+    {/* https://github.com/crucialfixpl */}
   </motion.div>
 );
 

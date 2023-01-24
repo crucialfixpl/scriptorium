@@ -8,8 +8,6 @@ import navigation from '../../../data/navigation.json';
 
 const Navigation = () => {
   const [activeRWD, setActiveRWD] = useState(false);
-  // const [activeLink, setActiveLink] = useState(`/`);
-
   const menuRef = useRef(null);
   const menuLinksRef = useRef(null);
 
@@ -38,7 +36,7 @@ const Navigation = () => {
 
   useOutsideMenu(menuRef);
 
-  const handleClick = (link) => {
+  const handleClick = () => {
     setActiveRWD(false);
   };
 

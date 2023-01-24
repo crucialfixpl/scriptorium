@@ -7,11 +7,7 @@ const Logo = () => {
 
   return (
     <div className={styles.root}>
-      <a
-        href="https://github.com/crucialfixpl/"
-        target="_blank"
-        rel="noreferrer"
-      >
+      <a href="/#">
         <img
           src={width < 768 ? `/logoS.svg` : `/logo.svg`}
           className={styles.logo}
