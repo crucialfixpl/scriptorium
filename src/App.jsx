@@ -24,7 +24,7 @@ function App() {
         <ScrollToTop />
         <AnimatePresence
           mode="wait"
-          initial={false}
+          // initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}
         >
           <Routes location={location} key={location.pathname}>
