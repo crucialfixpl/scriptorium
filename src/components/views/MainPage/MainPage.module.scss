@@ -2,6 +2,30 @@
 
 .root {
   @include flex(column, center, center);
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  img {
+    height: 100%;
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    transition: $transition;
+    width: 100%;
+    z-index: -1;
+  }
+
+
+  li {
+    list-style: none;
+    margin-left: 0.5rem;
+    text-decoration: none;
+  }
 }
 
 /* XXXL ExtraExtraLarge Devices, UltraWide Desktops  */

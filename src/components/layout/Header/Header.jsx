@@ -13,11 +13,6 @@ const Header = () => (
     </Col>
     <Col className="col-10">
       <Navigation />
-
-      {/* <nav>
-        <Link to="/">Home</Link>
-        <Link to="/projects">Projects</Link>
-      </nav> */}
     </Col>
   </Row>
 );

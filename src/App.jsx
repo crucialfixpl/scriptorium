@@ -1,10 +1,8 @@
-/* eslint-disable import/no-extraneous-dependencies */
-// import { useState, useEffect } from 'react';
+/* eslint-disable no-unused-vars */
 import { Routes, Route, useLocation } from 'react-router-dom';
 
 import './App.css';
 import { AnimatePresence } from 'framer-motion';
-
 import './styles/bootstrap.scss';
 import styles from './App.module.scss';
 
@@ -24,7 +22,6 @@ function App() {
         <ScrollToTop />
         <AnimatePresence
           mode="wait"
-          // initial={false}
           onExitComplete={() => window.scrollTo(0, 0)}
         >
           <Routes location={location} key={location.pathname}>

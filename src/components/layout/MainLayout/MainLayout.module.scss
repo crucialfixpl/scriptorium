@@ -1,4 +1,7 @@
+@import "../../../styles/settings.scss";
+
 .root {
+    @include flex(column, center, center);
     padding-top: 5rem;
     >:nth-child(2) {
         min-height: 80vh;

@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "name": "Archaeomedes",
+        "image": "./projects/archaeomedes.webp",
+        "description": "Website for an archaeological company",
+        "live": "https://archaeomedes.de",
+        "git": ""
+    },
+    {
+        "id": 2,
+        "name": "Pomoc Żywnościowa",
+        "image": "./projects/pomzyw.webp",
+        "description": "Website for a food bank",
+        "live": "https://pomoczywnosciowa.pl",
+        "git": ""
+    }
+]

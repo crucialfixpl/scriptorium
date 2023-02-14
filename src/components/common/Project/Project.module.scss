@@ -1,34 +1,62 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  @include flex(column, center, space-between);
-  width: 80%;
-  h2 {
-    align-self: start;
+  @include flex(row, center, center);
+  margin: 2.5rem 0;
+  min-height: 50vh;
+  &:after {
+    content: "";
+    display: block;
   }
-  ul {
-    list-style: none;
+  .projectPhoto {
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
     padding: 0;
-    width: 100%;
+    img {
+      display: block;
+      pointer-events: none;
+      transition: $transition;
+      width: 100%;
+    }
+    &:hover img {
+      scale: 1.2;
+    }
+  }
+  &__reversed {
+    @extend .root;
+  }
+}
 
+@media (max-width: 786px) {
+  .root {
   }
 }
 
 /* XXXL ExtraExtraLarge Devices, UltraWide Desktops  */
 @media (min-width: 1921px) {
   .root {
+    &__reversed {
+       flex-direction: row-reverse;
+     }
   }
 }
 
 /* XXL Extra Extra Large Devices, Desktops  */
 @media (min-width: 1400px) and (max-width: 1920px) {
   .root {
+    &__reversed {
+       flex-direction: row-reverse;
+     }
   }
 }
 
 /* XL Extra Extra Large Devices, Laptops  */
 @media (min-width: 1200px) and (max-width: 1399px) {
   .root {
+    &__reversed {
+       flex-direction: row-reverse;
+     }
   }
 }
 

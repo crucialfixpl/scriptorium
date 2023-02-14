@@ -1,7 +1,14 @@
 @import "../../../styles/settings.scss";
 
 /* XXXL ExtraExtraLarge Devices, UltraWide Desktops  */
-
+.root {
+  ul li {
+    list-style: none;
+    :nth-child(1) {
+      margin-right: 0.5rem;
+    }
+  }
+}
 .root {
   @include flex(column, center, center);
 }
