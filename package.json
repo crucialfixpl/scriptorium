@@ -1,8 +1,17 @@
 {
-  "name": "scriptorium",
+  "name": "Scriptorium",
+  "version": "1.0.0",
+  "description": "Scriptorium Web Development",
+  "author": "Scriptorium",
+  "homepage": "https://scriptorium.dev",
+
   "private": true,
-  "version": "0.0.0",
   "type": "module",
+  "engines": {
+    "npm": ">=8.19.2",
+    "node": ">=18.12.0"
+  },
+  "license": "MIT",
   "scripts": {
     "start": "vite --open",
     "build": "vite build",
