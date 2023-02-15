@@ -34,7 +34,7 @@ yarn start
 👤 **Scriptorium**
 
 * Website: https://scriptorium.dev
-* Github: [@Scriptorium](https://github.com/crucialfixpl)
+* Github: [@scriptoriumwebdev](https://github.com/scriptoriumwebdev)
 
 ## Show your support
 
